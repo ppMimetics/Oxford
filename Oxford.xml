@@ -35,6 +35,40 @@
                         <field name="VAR">x</field>
                       </block>
                     </value>
+                    <next>
+                      <block type="controls_if" id="259" inline="false">
+                        <value name="IF0">
+                          <block type="logic_compare" id="295" inline="true">
+                            <field name="OP">LTE</field>
+                            <value name="A">
+                              <block type="variables_get" id="305">
+                                <field name="VAR">x</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="312">
+                                <field name="NUM">80</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="movement_forward" id="269"></block>
+                        </statement>
+                        <next>
+                          <block type="robot_delay" id="324" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="331">
+                                <field name="NUM">250</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="movement_stop" id="341"></block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
